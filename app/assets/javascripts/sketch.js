@@ -39,7 +39,7 @@ class Strip {
 	}
 
 show() {
-	for (let i = 0; i < floor(random(30, 5000)); i += 2) {
+	for (let i = 0; i < floor(random(10, 5000)); i += 3) {
 		push();
 		this.y = noise(random(100, 300))*(random(-i, i));
 		translate(i*this.c, this.y*i/10)
