@@ -43,7 +43,9 @@ canvas {
     margin-top: 0;
     font-family: 'Bifocals', sans-serif;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 4em;
+    color:  #FFFFFF;
+    -webkit-text-stroke: 1px #EE2F03; 
   }
 
   table {
@@ -60,10 +62,18 @@ canvas {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 30px;
+  padding: 40px;
 
   a {
     text-decoration: none;
-    font-size: 3em;
+    font-size: 2em;
+    background: #EE2F03;
+    color: #FFFFFF;
+    padding: 0 8px 3px 10px;
+    border-radius: 40px;
+  }
+
+  a:hover {
+    background: #EEEEEE;
   }
 }
