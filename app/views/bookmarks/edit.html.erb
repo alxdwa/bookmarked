@@ -1,0 +1,37 @@
+<div class="container"> 
+  <div class="heading">
+    <h1>Edit Bookmark</h1>
+  </div>
+
+  <div class="content">
+    <form action="<%= bookmark_path %>" method="POST">
+      <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+      <input type="hidden" name="_method" value="patch" />
+
+      <table>
+        <tr>
+          <td>
+            <label for="title">Bookmark Title</label>
+          </td>
+          <td>
+            <input type="text" name="bookmark[title]" id="title" value="<%= @bookmark["title"] %>">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="url">URL</label>
+          </td>
+          <td>
+            <input type="url" name="bookmark[url]" id="url"  value="<%= @bookmark["url"] %>">
+          </td>
+        </tr>
+      </table>
+      <div>
+        <input type="submit" value="Update Bookmark">
+      </div>
+    </form>
+  </div>
+  <div class="links">
+    <%= link_to("View Bookmarks", bookmarks_path) %>
+  </div>
+</div>
