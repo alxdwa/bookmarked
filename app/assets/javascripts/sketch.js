@@ -19,7 +19,7 @@ function draw() {
 	stroke(238, 47, 3);
 	noFill();
 	strokeWeight(0.5);
-for (let i = 0; i < floor(random(5, 50)); i++) {
+for (let i = 0; i < floor(random(2, 10)); i++) {
 	push();
 	translate(i*5+100, i*60+100)
 	strips[i] = new Strip();
