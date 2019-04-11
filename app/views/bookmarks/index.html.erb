@@ -3,22 +3,16 @@
     <h1>Bookmarks</h1>
   </div>
   <div class="content">
-    <table>
-      <tr>
-        <th>Bookmark</th>
-        <th>URL</th>
-      </tr>
-
       <% @bookmarks.each_with_index do |bookmark, i| %>
-        <tr>
-          <td><%= bookmark["title"] %></td>
-          <td><%= bookmark["url"] %></td>
-          <td><%= link_to("Edit", edit_bookmark_path(i)) %></td>
-          <td><%= link_to("Delete", bookmark_path(i), method: :delete, data: { confirm: 'Are you sure?' }) %></td>
-        </tr>
-        
+        <table>
+          <tr>
+            <td><%= bookmark["title"] %></td>
+            <td><a href="<%= bookmark["url"] %>" target="_blank"><%= bookmark["url"] %></a></td>
+            <td><%= link_to("Edit", edit_bookmark_path(i)) %></td>
+            <td><%= link_to("Delete", bookmark_path(i), method: :delete, data: { confirm: 'Are you sure?' }) %></td>
+          </tr>
+        </table>  
       <% end %>
-    </table>
   </div>
   <div class="add">
     <%= link_to("+", new_bookmark_path) %>
